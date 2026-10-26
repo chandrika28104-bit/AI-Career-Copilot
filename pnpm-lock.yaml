@@ -170,6 +170,12 @@ importers:
         specifier: ~5.9.3
         version: 5.9.3
 
+  artifacts/ai-career-copilot:
+    devDependencies:
+      vite:
+        specifier: 7.3.7
+        version: 7.3.7(@types/node@25.9.9)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15)(yaml@2.9.1)
+
   artifacts/api-server:
     dependencies:
       '@workspace/api-zod':

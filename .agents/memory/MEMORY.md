@@ -1,0 +1,1 @@
+- [Conversation attachments](conversation-attachments.md) — after moving into a project, uploaded files may live under `.local/conversation-workspace/files/`.

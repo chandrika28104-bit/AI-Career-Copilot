@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/career-copilot/"
+title = "AI Career Copilot"
+description = "A resume-to-job analyzer that returns a structured Gemini assessment, with the API key stored server-side for secure Vercel deployment."
+version = "1.0.0"
+id = "artifacts/ai-career-copilot"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/career-copilot/" ]
+localPort = 21601
+
+[services.development]
+run = "pnpm --filter @workspace/ai-career-copilot run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ai-career-copilot", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ai-career-copilot/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21601"
+BASE_PATH = "/career-copilot/"

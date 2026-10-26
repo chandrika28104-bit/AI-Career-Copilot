@@ -1,0 +1,223 @@
+AI Career Copilot — Engineer Your First LLM Product
+
+40 pts
+Submit between 26 Oct – 15 Nov.
+
+What you will learn
+
+Prompt Engineering — the #1 AI skill of 2026
+LLM API Integration (Gemini) — connecting apps to AI
+Structured Output — forcing AI to return clean JSON
+Few-shot Prompting — teaching AI with examples
+AI Output Evaluation — testing like you tested models in Task 2
+Deploying an AI product on Vercel (free, permanent)
+5 simple steps
+
+1.
+Get free Gemini API key from Google AI Studio
+2.
+Download the starter HTML (UI ready, AI brain missing)
+3.
+Engineer your system prompt (ROLE + TASK + FORMAT + RULES)
+4.
+Test with 5 real resumes — evaluate outputs like a pro
+5.
+Iterate: refine prompt based on bad outputs
+6.
+Push to GitHub + deploy on Vercel
+7.
+Submit the live link
+Submit: Live Vercel URL (working AI product) + GitHub repo · Bonus: Add advanced AI features (multi-model, prompt versioning, PDF parsing) +10 XP
+
+Complete Guide
+Read this carefully before starting. If you get stuck, ask in your WhatsApp group.
+
+Build your first real AI product! You will create an AI Career Copilot that analyzes resumes and gives personalized feedback using Google's free Gemini API. The starter code is 100% working — you just add your API key and it runs. Then make it YOURS: change the business name, role, colors, features, and prompts. Advanced students can add PDF upload, chat history, or multi-language support. This is not a toy demo — it is a real product you can put on your resume.
+
+Time: 5-7 hours
+Level: Beginner+
+Deadline: On-time: 31 Oct (first review cycle). Grace window open till 15 Nov — Sunday reviews.
+Choose Your Path
+MINIMUM PASS
+⏱️ 2-3 hours
+
+✓
+Just add API key
+✓
+Test once
+✓
+Deploy
+No customization needed
+
+GOOD PASS
+RECOMMENDED
+⏱️ 4-5 hours
+
+✓
+Add customization
+✓
+Change name & colors
+✓
+Test 3 resumes
+Recommended for learning
+
+ADVANCED
++10 XP
+⏱️ 6-8 hours
+
+✓
+Add new features
+✓
+PDF upload or chat history
+Showcase Wall chance
+
+Before You Start
+✓
+Task 1 passed (you know Colab + Pandas basics)
+✓
+Task 2 passed (you understand models, accuracy, and evaluation)
+✓
+A Google account (for free Gemini API key)
+✓
+VS Code installed
+✓
+Basic HTML/JavaScript (we guide you — no prior experience needed)
+Step-by-Step Instructions
+1
+Get your FREE Gemini API key
+(10 min)
+Open the "Gemini API Setup Guide" PDF from assets. Go to: https://aistudio.google.com Sign in with your Google account. Click "Get API Key" → "Create API Key". Copy the key (starts with "AIza..."). Save it somewhere safe — you will paste it in the code. This key is FREE and gives you 15 requests per minute (1500/day) — more than enough.
+
+Common problems:
+
+• Key not working? Wait 2 minutes after creation.
+• Quota exceeded? You get 1500 requests/day free — that is plenty.
+Tips:
+
+• Never share your API key publicly. We will show you how to hide it in Vercel later.
+AI help:
+
+Ask ChatGPT: "Explain what an API key is and why it is like a password for AI services."
+
+2
+Download the starter file
+(3 min)
+Scroll to "Premium Starter Assets" box. Click "AI Career Copilot Starter (HTML + JS)". Save it as index.html in a new folder called "ai-career-copilot". Double-click the file — a beautiful UI opens in your browser. You will see: resume text area, job description area, "Analyze" button, and results section. The UI is complete — you only need to add the AI brain (Gemini API).
+
+Common problems:
+
+• File not opening? Right-click → Open with → Chrome.
+• UI looks broken? Make sure file is named exactly index.html.
+Tips:
+
+• The starter has professional design, responsive layout, and all UI components ready.
+3
+Add your API key (connect to the LLM)
+(5 min)
+Open VS Code → File → Open Folder → select "ai-career-copilot". Click index.html in the sidebar. Find the line (around line 180): const GEMINI_API_KEY = "YOUR_API_KEY_HERE"; Replace "YOUR_API_KEY_HERE" with your actual API key (keep the quotes). Save (Ctrl+S). Double-click index.html → paste any resume + job description → click Analyze. Watch the AI respond in real-time! 🎉
+
+Common problems:
+
+• No response? Check if API key is correct (no extra spaces).
+• Error message? Open browser console (F12) and check for errors.
+Tips:
+
+• Only change the API key line. Do not delete any other code.
+4
+Understand Prompt Engineering (the brain of your AI)
+(30 min)
+Scroll down in index.html to find the SYSTEM_PROMPT variable. Read the prompt carefully — this is what tells Gemini what to do. The prompt has 4 parts (the Prompt Engineering Framework): 1. ROLE: "You are an expert career coach..." — gives the AI a persona 2. TASK: "Analyze this resume against the job description..." — defines the job 3. OUTPUT FORMAT: "Return JSON with: ats_score, missing_keywords..." — forces structured output 4. RULES: "Keep answers short, be specific, use numbers..." — sets constraints This is prompt engineering — writing instructions that make AI work correctly. Open the Gemini API Setup PDF for more prompt examples.
+
+Tips:
+
+• A good prompt is like a good job description — clear, specific, and measurable.
+AI help:
+
+Ask Claude: "Help me improve this prompt to get more specific feedback: [paste your prompt]"
+
+5
+Customize the prompt for YOUR use case
+(20 min)
+Decide: What kind of career copilot do you want to build? Option A: General resume analyzer (default) Option B: Tech industry specialist (focus on coding skills) Option C: Fresh graduate advisor (focus on internships) Option D: Career changer guide (focus on transferable skills) Modify the SYSTEM_PROMPT to match your choice. Example: Change "You are an expert career coach" to "You are a tech industry recruiter with 10 years of experience hiring software engineers". Save the file and test with a new resume.
+
+Tips:
+
+• The more specific your prompt, the better the AI responses.
+AI help:
+
+Ask ChatGPT: "Write a system prompt for a [your choice] career advisor that analyzes resumes."
+
+6
+Test with 5 real resumes (evaluate like a pro)
+(30 min)
+Find 5 sample resumes online (search "sample resume PDF" or use your own). Copy-paste resume text into the "Resume" text area. Copy-paste a job description into the "Job Description" area. Click "Analyze Resume" button. Wait 3-5 seconds — AI response appears. Evaluate each output: - Is the ATS score realistic? - Are missing keywords actually missing? - Are improvements actionable (not generic)? If answers are generic, go back and improve your prompt. Take screenshots of your best results — you will need them for submission.
+
+Common problems:
+
+• Slow response? Gemini free tier has rate limits — wait 1 minute.
+• JSON parse error? The AI returned invalid JSON — improve your prompt format rules.
+Tips:
+
+• Bad answers = bad prompt. Fix the prompt, not the code. This is exactly how AI engineers iterate.
+7
+Optional: Add advanced AI features (+10 XP)
+(45 min)
+Choose ONE advanced AI feature to add: Option A: PDF upload — use pdf.js library to extract text from PDF resumes Option B: Save history — use localStorage to save past analyses (like a database) Option C: Multi-language — add Hindi/English toggle using Gemini Option D: Export results — add "Download as PDF" button Option E: Dark mode — reuse Task 2 dark mode logic Option F: Add more analysis features (salary estimate, skill gap analysis) Search ChatGPT/Claude for implementation help. Test thoroughly before deploying.
+
+Tips:
+
+• Only add features if you feel confident. A working simple app beats a broken fancy one.
+AI help:
+
+Ask Claude: "Give me step-by-step code to add PDF upload to my HTML app using pdf.js library."
+
+8
+Deploy on Vercel (make it live forever)
+(15 min)
+Go to github.com → Sign in. Click "+" → "New repository". Name: ai-career-copilot-yourname (small letters, hyphens). Description: "AI Career Copilot — Resume Analyzer using Gemini API". Public → Do NOT check "Add README" → Create repository. Click "uploading an existing file" → drag index.html → Commit changes. Go to vercel.com → Sign in with GitHub. Click "Add New" → "Project". Find "ai-career-copilot-yourname" → Import. Framework Preset: "Other" → Deploy. Wait 30-60 seconds for confetti. Copy your live URL (like https://ai-career-copilot-rahul.vercel.app).
+
+Common problems:
+
+• Deployment failed? File must be named index.html.
+• Vercel welcome page? You imported wrong repository.
+Tips:
+
+• Your app is now live forever. Share the link with friends!
+9
+Hide your API key (security best practice)
+(10 min)
+Your API key is currently visible in the code (anyone can see it). Go to Vercel dashboard → your project → Settings → Environment Variables. Add new variable: Name = GEMINI_API_KEY, Value = your actual key. In your index.html, change: const GEMINI_API_KEY = process.env.GEMINI_API_KEY; Redeploy on Vercel (it auto-deploys when you push to GitHub). Now your key is hidden and secure.
+
+Tips:
+
+• Never commit API keys to GitHub. Always use environment variables.
+AI help:
+
+Ask ChatGPT: "How to hide API keys in Vercel using environment variables?"
+
+10
+Submit + Showcase Wall chance
+(5 min)
+Dashboard → Submissions → "AI Career Copilot" → Submit task. Link box: your Vercel URL. Notes: GitHub repo URL + which prompt style you chose + 1-line description. AI box: one line, e.g. "Used ChatGPT/Claude to improve my prompt engineering." Before submitting: open your Vercel URL in incognito mode — test with a resume. Top projects get featured on the ApnoAI Showcase Wall with your name + live link.
+
+Tips:
+
+• Showcase selection = working app + creative prompt + clean UI.
+How to Submit
+Live Vercel URL (AI Career Copilot working with Gemini API) + GitHub repo link.
+
+1. Click "Submit Task" button on this card.
+2. Paste your Vercel URL in the main link box.
+3. Add GitHub URL in notes.
+4. Add prompt style + description in notes.
+5. Add one line about AI usage.
+6. Click Submit.
+This is your first real AI product. If stuck, remember: prompt engineering is trial and error. Test, iterate, improve — just like you iterated on your model in Task 2.
+
+• Post your Vercel URL in the group for peer feedback before submitting. Mentors review within 48h.
+
+• For personal issues: hello@apnoai.com
+
+📦 Premium Starter Assets & Guides
+
+[AI Career Copilot Starter (HTML + JS)](https://apnoai.com/assets/ai-career-copilot-starter.html)
